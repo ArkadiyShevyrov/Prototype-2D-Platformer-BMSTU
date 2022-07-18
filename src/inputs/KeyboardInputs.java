@@ -37,8 +37,6 @@ public class KeyboardInputs implements KeyListener {
         }
     }
 
-    //Test1
-
     @Override
     public void keyReleased(KeyEvent e) {
         switch (GameState.state) {
