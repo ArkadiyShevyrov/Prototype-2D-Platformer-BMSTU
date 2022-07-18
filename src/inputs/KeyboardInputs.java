@@ -37,7 +37,7 @@ public class KeyboardInputs implements KeyListener {
         }
     }
 
-    //Test
+    //Test1
 
     @Override
     public void keyReleased(KeyEvent e) {
