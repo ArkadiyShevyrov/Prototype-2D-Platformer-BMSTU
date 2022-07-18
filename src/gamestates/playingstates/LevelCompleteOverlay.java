@@ -86,7 +86,8 @@ public class LevelCompleteOverlay extends PlayStateInterface {
             }
         } else if (isIn(e, next)) {
             if (next.isMousePressed()) {
-//TODO                playing.loadNextLevel();
+// TODO: откоментировать после создания данной функции
+//              playing.loadNextLevel();
             }
         }
 

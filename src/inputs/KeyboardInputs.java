@@ -29,14 +29,12 @@ public class KeyboardInputs implements KeyListener {
                 gamePanel.getGame().getMenu().keyPressed(e);
                 break;
             case OPTIONS:
-                //TODO:
             case QUIT:
-                //TODO:
             default:
                 break;
         }
     }
-    
+
     @Override
     public void keyReleased(KeyEvent e) {
         switch (GameState.state) {
@@ -47,9 +45,7 @@ public class KeyboardInputs implements KeyListener {
                 gamePanel.getGame().getMenu().keyReleased(e);
                 break;
             case OPTIONS:
-                //TODO:
             case QUIT:
-                //TODO:
             default:
                 break;
         }

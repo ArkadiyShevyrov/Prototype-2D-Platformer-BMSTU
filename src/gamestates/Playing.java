@@ -13,8 +13,6 @@ import static utilz.Constants.GameWindowConstants.*;
 public class Playing extends GameStateInterface {
 
     private LevelManager levelManager;
-//    private EnemyManager enemyManager;
-//    private ObjectManager objectManager;
 
     private Player player;
 
@@ -30,13 +28,10 @@ public class Playing extends GameStateInterface {
     public Playing() {
         initClasses();
         calcLvlOffset();
-//        loadStartLevel();
     }
 
     private void initClasses() {
         levelManager = new LevelManager(this);
-//        enemyManager = new EnemyManager(this);
-//        objectManager = new ObjectManager(this);
 
         player = new Player(200, 200, (int) (64 * SCALE), (int) (40 * SCALE), this);
 
@@ -53,8 +48,6 @@ public class Playing extends GameStateInterface {
         switch (PlayState.state) {
             case PLAYING:
                 levelManager.update();
-//            enemyManager.update(levelManager.getCurrentLevel().getLevelData(), player);
-//            objectManager.update(levelManager.getCurrentLevel().getLevelData(), player);
                 player.update();
                 checkCloseToBorder();
                 break;
@@ -90,8 +83,6 @@ public class Playing extends GameStateInterface {
     @Override
     public void draw(Graphics g) {
         levelManager.draw(g, lvlOffsetX);
-//        enemyManager.draw(g, xLvlOffset);
-//        objectManager.draw(g, xLvlOffset);
         player.draw(g, lvlOffsetX);
 
         switch (PlayState.state) {
@@ -247,8 +238,6 @@ public class Playing extends GameStateInterface {
 
     public void resetAll() {
         PlayState.state = PlayState.PLAYING;
-//        enemyManager.resetAllEnemies();
-//        objectManager.resetAllObjects();
         player.resetAll();
     }
 
