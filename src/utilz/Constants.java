@@ -19,7 +19,7 @@ public class Constants {
     }
 
     public static class GameConstants {
-        public final static float GRAVITY = 0.04f * SCALE;
+        public final static float GRAVITY = 0.035f * SCALE;
         public static final float ANI_SPEED = 25;
 
     }
