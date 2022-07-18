@@ -29,9 +29,7 @@ public class KeyboardInputs implements KeyListener {
                 gamePanel.getGame().getMenu().keyPressed(e);
                 break;
             case OPTIONS:
-                //TODO:
             case QUIT:
-                //TODO:
             default:
                 break;
         }
@@ -47,9 +45,7 @@ public class KeyboardInputs implements KeyListener {
                 gamePanel.getGame().getMenu().keyReleased(e);
                 break;
             case OPTIONS:
-                //TODO:
             case QUIT:
-                //TODO:
             default:
                 break;
         }

@@ -1,4 +1,4 @@
-// TODO: Нужен Рефакторинг!
+// TODO: Добавить систему здоровья
 
 package entities;
 
@@ -73,20 +73,9 @@ public class Player extends Entity {
     }
 
     public void update() {
-        // TODO:
-//        updateHealthBar();
-//
-//        if (currentHealth <= 0) {
-//            playing.setGameOver(true);
-//            return;
-//        }
-//
         updateAttackBox();
         updatePos();
 
-        if (moving) {
-            checkMoving();
-        }
         if (attacking)
             checkAttack();
 
@@ -168,17 +157,10 @@ public class Player extends Entity {
         }
     }
 
-    private void checkMoving() {
-        // TODO:
-    }
-
     private void checkAttack() {
         if (attackChecked || aniIndex != 1)
             return;
         attacking = true;
-        // TODO:
-//        playing.checkEnemyHit(attackBox);
-//        playing.checkObjectHit(attackBox);
     }
 
     private void updateAnimationTick() {
@@ -234,7 +216,6 @@ public class Player extends Entity {
                 width * flipW, height, null);
         drawHitBox(g, lvlOffset);
         drawAttackBox(g, lvlOffset);
-        // TODO: drawUI(g);
     }
 
     public void setLeft(boolean left) {

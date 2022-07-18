@@ -51,10 +51,9 @@ public class Game implements Runnable{
                 playing.update();
                 break;
             case OPTIONS:
-                // TODO
+                // TODO Сделать настройки игры рабочими
                 break;
             case QUIT:
-                // TODO
                 gameExit = true;
             default:
                 System.exit(0);
@@ -72,9 +71,8 @@ public class Game implements Runnable{
                 menu.draw(g);
                 break;
             case OPTIONS:
-                // TODO
+                // TODO Сделать настройки игры рабочими
             case QUIT:
-                // TODO
             default:
                 break;
         }
