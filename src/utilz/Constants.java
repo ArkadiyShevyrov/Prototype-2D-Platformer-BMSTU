@@ -141,6 +141,10 @@ public class Constants {
             public static final String MENU_BACKGROUND_PNG = "menu_background.png";
             public static final String MENU_BUTTONS_PNG = "menu_buttons.png";
         }
+        public static final class Options {
+            public static final String OPTIONS_BACKGROUND_PNG = "options_background.png";
+
+        }
 
         public static final class Pause {
             public static final String PAUSE_BACKGROUND_PNG = "pause_background.png";
