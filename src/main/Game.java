@@ -2,6 +2,7 @@ package main;
 
 import gamestates.GameState;
 import gamestates.Menu;
+import gamestates.Options;
 import gamestates.Playing;
 
 import java.awt.*;
@@ -14,6 +15,7 @@ public class Game implements Runnable{
 
     private Menu menu;
     private Playing playing;
+    private Options options;
 
     private boolean gameExit;
 
@@ -26,6 +28,7 @@ public class Game implements Runnable{
     private void initClasses() {
         menu = new Menu();
         playing = new Playing();
+        options = new Options();
     }
 
     private void initPanels() {
@@ -51,7 +54,7 @@ public class Game implements Runnable{
                 playing.update();
                 break;
             case OPTIONS:
-                // TODO Сделать настройки игры рабочими
+                options.update();
                 break;
             case QUIT:
                 gameExit = true;
@@ -71,7 +74,7 @@ public class Game implements Runnable{
                 menu.draw(g);
                 break;
             case OPTIONS:
-                // TODO Сделать настройки игры рабочими
+                options.draw(g);
             case QUIT:
             default:
                 break;
@@ -133,6 +136,10 @@ public class Game implements Runnable{
 
     public Playing getPlaying() {
         return playing;
+    }
+
+    public Options getOptions() {
+        return options;
     }
 
 }
